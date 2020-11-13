@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'ru.nsu.ccfit.dzhino'
+version '1.0-SNAPSHOT'
+
+compileJava {
+    options.fork = true
+    options.forkOptions.executable = 'javac'
+    options.compilerArgs << "-XDignore.symbol.file"
+}
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'org.ow2.asm', name: 'asm', version: '7.0'
+    compile group: 'org.ow2.asm', name: 'asm-util', version: '9.0'
+}
