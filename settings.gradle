@@ -1,2 +1,3 @@
 rootProject.name = 'JavaSoftOptimization'
-
+include 'Agent'
+include 'TransactionProcessor'
